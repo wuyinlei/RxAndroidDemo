@@ -31,16 +31,25 @@ public class LoginUtils {
         mOkHttpClient = new OkHttpClient();
     }
 
+    /**
+     *
+     * @param url  登录地址
+     * @param params  请求参数
+     * @return   后台返回的数据
+     */
     public Observable<String> login(String url, Map<String, String> params) {
 
         return Observable.create((Observable.OnSubscribe<String>) subscriber -> {
             if (!subscriber.isUnsubscribed()) {
+                //创建formbody
                 FormBody.Builder builder = new FormBody.Builder();
                 if (params != null && !params.isEmpty()) {
+                    //循环获取body中的数据
                     for (Map.Entry<String, String> entry : params.entrySet()) {
                         builder.add(entry.getKey(), entry.getValue());
                     }
                 }
+                //请求体
                 RequestBody requestBody = builder.build();
                 Request request = new Request.Builder().url(url).post(requestBody).build();
                 mOkHttpClient.newCall(request).enqueue(new Callback() {
@@ -52,8 +61,10 @@ public class LoginUtils {
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         if (response.isSuccessful()) {
+                            //交给观察者处理数据
                             subscriber.onNext(response.body().string());
                         }
+                        //完成的回调
                         subscriber.onCompleted();
                     }
                 });

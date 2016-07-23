@@ -10,8 +10,6 @@ package yinlei.com.rxandroid.observer;
  */
 
 public interface Watcher {
-
+    //数据变化进行更新
     public void update(String str);
-
-
 }

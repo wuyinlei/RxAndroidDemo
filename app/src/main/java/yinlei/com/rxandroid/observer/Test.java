@@ -4,7 +4,7 @@ package yinlei.com.rxandroid.observer;
 
  *
  * @version V1.0 <描述当前版本功能>
- * @FileName: yinlei.com.rxandroid.observer.Test.java
+ * @FileName: Test.java
  * @author: myName
  * @date: 2016-07-15 22:07
  */
@@ -21,6 +21,6 @@ public class Test {
         watched.addWatcher(watcher2);
         watched.addWatcher(watcher3);
 
-        watched.notifyWathers("我要走了");
+        watched.notifyWathers("I go");
     }
 }

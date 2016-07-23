@@ -32,7 +32,7 @@ public class RxUtils {
             @Override
             public void call(Subscriber<? super String> subscriber) {
                 if (!subscriber.isUnsubscribed()) { //观察者和被观察者还有订阅消息
-                    subscriber.onNext("hello");
+                    subscriber.onNext("hello"); //返回的数据
                     subscriber.onNext("hi");
                     subscriber.onNext(getUserName());  //因为是传入的是字符串泛型
                     subscriber.onCompleted(); //完成
@@ -71,7 +71,7 @@ public class RxUtils {
     }
 
     /**
-     * 打印的功能
+     * 打印的功能  链式结构，更加易于代码的可读性
      */
     public static void createPrint() {
         Observable.create(new Observable.OnSubscribe<Integer>() {
@@ -105,6 +105,7 @@ public class RxUtils {
 
     /**
      * 使用在被观察者，返回的对象一般都是数据类型
+     * 它接收一个集合作为输入，然后每次输出一个元素给subscriber
      */
     public static void from() {
         Integer[] items = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -120,6 +121,7 @@ public class RxUtils {
 
     /**
      * 指定某一时刻进行数据发送
+     * interval()函数的两个参数：一个指定两次发射的时间间隔，另一个是用到的时间单位
      */
     public static void interval() {
         Integer[] items = {1, 2, 3, 4};
@@ -133,7 +135,8 @@ public class RxUtils {
     }
 
     /**
-     *
+     * 假如我们只有3个独立的AppInfo对象并且我们想把他们转化为Observable并填充到RecyclerView的item中：
+     * 这里我们有两个数组，然后通过转化为Observable组成一个item
      */
     public static void just() {
         Integer[] items1 = {1, 2, 3, 4};

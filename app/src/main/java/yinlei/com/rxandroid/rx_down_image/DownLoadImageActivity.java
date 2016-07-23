@@ -40,8 +40,9 @@ public class DownLoadImageActivity extends AppCompatActivity implements View.OnC
         if (view.getId() == R.id.button) {
             //使用HTTP协议获取数据
             mUtils.downLoadImageOne(url)
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.io())  //在子线程请求
+                    .observeOn(AndroidSchedulers.mainThread()) //结果返回到主线程这一步很厉害啊，不用我们去用handler或者async切换线程了
+                    // 主要我们去调用一下代码，就已经帮我们切换好了线程，是不是感觉有点很厉害啊
                     .subscribe(new Subscriber<byte[]>() {
                 @Override
                 public void onCompleted() {

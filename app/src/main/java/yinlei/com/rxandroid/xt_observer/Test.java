@@ -12,7 +12,6 @@ package yinlei.com.rxandroid.xt_observer;
 public class Test {
 
     public static void main(String[] args) {
-
         XTObservable mObservable = new XTObservable();
         XTobserver mXTobserver = new XTobserver(mObservable);
         mObservable.setData(1);

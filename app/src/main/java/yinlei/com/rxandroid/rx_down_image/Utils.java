@@ -35,9 +35,11 @@ public class Utils {
         return Observable.create(new Observable.OnSubscribe<byte[]>() {
             @Override
             public void call(Subscriber<? super byte[]> subscriber) {
-                if (!subscriber.isUnsubscribed()) {
+                if (!subscriber.isUnsubscribed()) {  //存在订阅关系
                     //访问网络操作
+                    //请求体
                     Request request = new Request.Builder().url(path).get().build();
+                    //异步回调
                     mOkHttpClient.newCall(request).enqueue(new Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {

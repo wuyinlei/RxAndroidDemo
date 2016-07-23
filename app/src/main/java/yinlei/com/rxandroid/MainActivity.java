@@ -7,6 +7,7 @@ import android.view.View;
 
 import yinlei.com.rxandroid.rx_android.RxUtils;
 import yinlei.com.rxandroid.rx_down_image.DownLoadImageActivity;
+import yinlei.com.rxandroid.rx_login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void downLoad(View view) {
         Intent intent = new Intent(MainActivity.this, DownLoadImageActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void btnLogin(View view){
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 }

@@ -3,6 +3,7 @@
           package="yinlei.com.rxandroid">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,6 +18,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".rx_down_image.DownLoadImageActivity">
+        </activity>
+        <activity android:name=".rx_login.LoginActivity">
+        </activity>
+        <activity android:name=".rx_login.ContentActivity">
         </activity>
     </application>
 

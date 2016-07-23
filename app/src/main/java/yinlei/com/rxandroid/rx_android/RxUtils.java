@@ -23,7 +23,6 @@ public class RxUtils {
 
     private static final String TAG = RxUtils.class.getSimpleName();
 
-
     /**
      * 使用create方式
      */

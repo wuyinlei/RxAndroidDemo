@@ -49,4 +49,10 @@
        android:text="filter 方法"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
+
+   <Button
+       android:onClick="downLoad"
+       android:text="rx演示下载图片"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 </LinearLayout>

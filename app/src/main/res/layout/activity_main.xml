@@ -5,60 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-  >
+    >
 
-   <Button
-       android:onClick="create"
-       android:text="create 方法"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-   <Button
-       android:onClick="print"
-       android:text="print 方法"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-
-   <Button
-       android:onClick="from"
-       android:text="from 方法"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
-   <Button
-       android:onClick="interval"
-       android:text="interval 方法"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="create"
+            android:text="create 方法"/>
 
-   <Button
-       android:onClick="just"
-       android:text="just 方法"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="print"
+            android:text="print 方法"/>
 
-   <Button
-       android:onClick="range"
-       android:text="range 方法"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="from"
+            android:text="from 方法"/>
 
-   <Button
-       android:onClick="filter"
-       android:text="filter 方法"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
 
-   <Button
-       android:onClick="downLoad"
-       android:text="rx演示下载图片"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="interval"
+            android:text="interval 方法"/>
 
-   <Button
-       android:onClick="btnLogin"
-       android:text="rx演示登录"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="just"
+            android:text="just 方法"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="range"
+            android:text="range 方法"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="filter"
+            android:text="filter 方法"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="downLoad"
+            android:text="rx演示下载图片"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnCreate"
+            android:text="Create方法"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="publish"
+            android:text="publish方法"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="privatePublish"
+            android:text="privatePublish方法"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

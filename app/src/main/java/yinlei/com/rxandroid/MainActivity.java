@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         RxUtils.filter();
     }
 
+    public void privatePublish(View view){
+        RxUtils.privatePublish();
+    }
+
+    public void publish(View view){RxUtils.publicObservable();}
+
     public void downLoad(View view) {
         Intent intent = new Intent(MainActivity.this, DownLoadImageActivity.class);
         startActivity(intent);
